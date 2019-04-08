@@ -7,4 +7,12 @@ export default createGlobalStyle`
      * {
      box-sizing:border-box;
      }
+     body{
+          background-colors:${props => props.theme.bgColor};
+          color:${props => props.theme.blackColor};
+     }
+     a {
+          color:${props => props.theme.blueColor};
+          text-decoration:none
+     }
 `;
