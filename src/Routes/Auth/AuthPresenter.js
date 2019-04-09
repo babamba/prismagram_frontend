@@ -50,27 +50,29 @@ export default ({
      action,
      setAction,
      username,
-     password,
+    //  password,
      firstName,
      lastName,
-     email
+     email,
+     onSubmit
 }) => {
   return (
     <Wrapper>
       <Form>
         {action === "logIn" ? (
-          <form>
-            <Input placeholder={"Username"} {...username}/>
-            <Input placeholder={"Password"} {...password}/>
+          <form onSubmit={onSubmit}>
+            <Input placeholder={"Email"} {...email}/>
+            {/* <Input placeholder={"Username"} {...username}/> */}
+            {/* <Input placeholder={"Password"} {...password}/> */}
             <Button text={"Log in"} />
           </form>
         ) : (
-          <form>
+          <form onSubmit={onSubmit}>
             <Input placeholder={"First name"} {...firstName}/>
             <Input placeholder={"Last name"} {...lastName}/>
             <Input placeholder={"Email"} {...email}/>
             <Input placeholder={"Username"} {...username}/>
-            <Input placeholder={"Password"} {...password}/>
+            {/* <Input placeholder={"Password"} {...password}/> */}
             <Button text={"Sign up"} />
           </form>
         )}
