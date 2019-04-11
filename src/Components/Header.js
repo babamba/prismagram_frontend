@@ -2,10 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import { Link, withRouter } from "react-router-dom";
 import Input from "./Input";
-//import useInput from "../Hooks/useInput";
-//import { Compass, HeartEmpty, User, Logo } from "./Icons";
+import useInput from "../Hooks/useInput";
+import { Compass, HeartEmpty, User, Logo } from "./Icons";
 import { useQuery } from "react-apollo-hooks";
-//import { ME } from "../SharedQueries";
+import { ME } from "../SharedQueries";
 
 const Header = styled.header`
   width: 100%;
@@ -64,16 +64,15 @@ const HeaderLink = styled(Link)`
 `;
 
 export default withRouter(({ history }) => {
-  //const search = useInput("");
-  //const { data } = useQuery(ME);
-
-//   const onSearchSubmit = e => {
-//     e.preventDefault();
-//     history.push(`/search?term=${search.value}`);
-//   };
+  const search = useInput("");
+  const { data } = useQuery(ME);
+  const onSearchSubmit = e => {
+    e.preventDefault();
+    history.push(`/search?term=${search.value}`);
+  };
   return (
     <Header>
-      {/* <HeaderWrapper>
+      <HeaderWrapper>
         <HeaderColumn>
           <Link to="/">
             <Logo />
@@ -105,7 +104,7 @@ export default withRouter(({ history }) => {
             </HeaderLink>
           )}
         </HeaderColumn>
-      </HeaderWrapper> */}
+      </HeaderWrapper>
     </Header>
   );
 });
