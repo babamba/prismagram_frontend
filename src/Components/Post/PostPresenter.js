@@ -121,7 +121,7 @@ export default ({
   onKeyPress,
   comments,
   selfComments,
-  caption
+  //caption
 }) => (
   <Post>
     <Header>

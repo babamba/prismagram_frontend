@@ -50,7 +50,9 @@ export default () => {
      return (
           <Wrapper>
                {loading && <Loader/> }
-               {!loading && data && data.seeFeed && 
+               {!loading && 
+                    data && 
+                    data.seeFeed && 
                     data.seeFeed.map(post =>
                          <Post 
                               key={post.id} 
