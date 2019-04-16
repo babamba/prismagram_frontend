@@ -62,6 +62,7 @@ export default () => {
                               comments={post.comments}
                               createdAt={post.createdAt}
                               caption={post.caption}
+                              location={post.location}
                          />
                )}
           </Wrapper>
