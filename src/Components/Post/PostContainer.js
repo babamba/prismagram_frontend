@@ -87,6 +87,7 @@ const PostContainer = ({
             user={user}
             files={files}
             location={location}
+            caption={caption}
             likeCount={likeCountS}
             isLiked={isLikedS}
             comments={comments}

@@ -40,7 +40,7 @@ const Wrapper = styled.div`
      display: flex;
      flex-direction: column;
      align-items: center;
-     // min-height: 80vh;
+     min-height: 80vh;
 `;
 
 
@@ -49,6 +49,7 @@ export default () => {
      console.log(data, loading);
      return (
           <Wrapper>
+               
                {loading && <Loader/> }
                {!loading && 
                     data && 

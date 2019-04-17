@@ -14,7 +14,7 @@ export default () => {
 
   const firstName = useInput("");
   const lastName = useInput("");
-  const email = useInput("orochi13@naver.com");
+  const email = useInput("");
 
   const secret = useInput("");
 
@@ -95,6 +95,8 @@ export default () => {
           //TODO log user in
           if(token !== "" || token !== undefined){
             localLoginMutation({ variables : {token } });
+          } else {
+            throw Error();
           }
         } catch (error) {
           toast.error(" Can't confirm secret")

@@ -121,13 +121,15 @@ export default ({
   onKeyPress,
   comments,
   selfComments,
-  //caption
+  caption
 }) => (
   <Post>
     <Header>
       <Avatar size={"sm"} url={avatar}/>
       <UserColumn>
-          <FatText text={username}></FatText>
+          <Link to={`/${username}`} >
+            <FatText text={username} />
+          </Link>
           <Location>{location}</Location>
       </UserColumn>
     </Header>
@@ -143,7 +145,9 @@ export default ({
       </Button>
     </Buttons>
       <FatText text={likeCount === 1? '1 like' : `${likeCount} likes`}></FatText>
-      
+      <Caption>
+        <FatText text={username} /> {caption}
+      </Caption>
       {comments && (
         <Comments>
           {comments.map(comment =>  (
