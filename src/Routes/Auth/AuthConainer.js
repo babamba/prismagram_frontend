@@ -94,7 +94,7 @@ export default () => {
           //const token = confirmSecret
           //TODO log user in
           if(token !== "" || token !== undefined){
-            localLoginMutation({ variables : {token } });
+            await localLoginMutation({ variables : { token } });
           } else {
             throw Error();
           }
